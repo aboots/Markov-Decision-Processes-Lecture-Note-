@@ -111,7 +111,7 @@ notebooks:
     link: /notes/notebooks/16_deep_neural_networks/
     text: <p>Deep Neural Networks (CNNs,...)</p>
   - md: notebooks/20_markov_decision_processes_part_2
-    kind: S2021, LN, Notebook
+    kind: F2021, LN
     link: /notes/notebooks/20_markov_decision_processes_part_2/
     text: <p>Markov Decision Processes - Part 2</p>
     description: <p>An Introduction to Markov Decision Processes (From Value Iteration
