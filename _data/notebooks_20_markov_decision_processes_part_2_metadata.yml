@@ -6,6 +6,7 @@ header:
 authors:
   label:
     position: top
+  kind: people
   content:
   - name: Mohammad Mahdi Abootorabi
     role: Author
@@ -15,6 +16,7 @@ authors:
       icon: fab fa-github
     - link: mailto:mahdi.abootorabi2@gmail.com
       icon: fas fa-envelope
+    kind: person
   - name: Yalda Shabanzadeh
     role: Author
     image: /notes/assets/authors_images/yalda_shabanzadeh.jpg
@@ -23,6 +25,7 @@ authors:
       icon: fab fa-github
     - link: mailto:yaldashabanzadeh@gmail.com
       icon: fas fa-envelope
+    kind: person
   - name: Amirreza Soleimanbeigi
     role: Author
     image: /notes/assets/authors_images/amirreza_soleimanbeigi.jpg
@@ -31,6 +34,7 @@ authors:
       icon: fab fa-github
     - link: mailto:amirsoli80@gmail.com
       icon: fas fa-envelope
+    kind: person
 kind: Content
 search:
   content: true
