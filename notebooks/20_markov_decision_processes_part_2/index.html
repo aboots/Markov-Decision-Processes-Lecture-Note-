@@ -251,7 +251,7 @@ It is an one-step algorithm.</p>
 <p>For fixed values, get a better policy using policy extraction:</p>
 </li>
 </ul>
-<p>$${\pi}<em s_="s'">{i+1}(s)= \underset{a}{\operatorname{argmax}} \Sigma</em> {P(s^{\prime}|s,a)} \Big [R(s,a,s') + {\gamma}U^{\pi_{i}}(s') \Big]$$</p>
+<p>$$\pi_{i+1}(s) = \underset{a}{\operatorname{argmax}} \Sigma_{s'} {P(s^{\prime}|s,a)} \Big [R(s,a,s') + {\gamma}U^{\pi_{i}}(s') \Big]$$</p>
 <ul>
 <li>
 <p><strong>Repeat steps until policy converges</strong></p>
