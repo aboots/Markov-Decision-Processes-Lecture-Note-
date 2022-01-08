@@ -10,6 +10,7 @@ metadata: notebooks_20_markov_decision_processes_part_2_metadata
 <p><br/></p>
 <p><br/></p>
 <h1> Table of Contents </h1>
+<hr/>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#value_iteration">Value Iteration</a><ul>
@@ -44,11 +45,13 @@ metadata: notebooks_20_markov_decision_processes_part_2_metadata
 </ul>
 <p><br/></p>
 <div id="introduction"><h1> Introduction </h1></div>
+<hr/>
 <p><br/></p>
 <p>In the previous lecture, you became familiar with what MDP is. As you know, MDP can be remembered as a mathematical framework used for modeling decision-making problems. Usually, an agent can do some actions, but the outcomes are stochastic and not entirely controllable. The goal is to decide the best action to select based on his current state. It’s better to know MDP before Reinforcement Learning.</p>
 <p>In this lecture, we are going to talk about two different methods for solving MDPs. These two methods are value iteration and policy iteration. Stay with us.</p>
 <p><br/></p>
 <div id="value_iteration"><h1> Value Iteration </h1></div>
+<hr/>
 <p><br/></p>
 <p><center><img src="/notes/assets/images/value_iteration.png" width="400"/></center></p>
 <p>The Bellman equation is the basis of the <strong>value iteration</strong> algorithm for solving MDPs. We would like to solve these simultaneous equations to find the utilities. One thing to try is an iterative approach. We start with arbitrary initial values for the utilities, calculate the right-hand side of the equation, and plug it into the left-hand side. Thereby updating the utility of each state from the utilities of its neighbors. We repeat this until we reach an equilibrium.</p>
@@ -306,6 +309,7 @@ Can converge mush faster under some condition</p>
 $O(\lvert S\rvert^{2} \lvert A\rvert)=O(\lvert S\rvert^{2})+O(\lvert S\rvert^{2} \lvert A\rvert)$ which are orders of policy evaluation and policy improvement. </p>
 <p><br/></p>
 <div id="conclusion"><h1> Conclusion </h1></div>
+<hr/>
 <p><br/></p>
 <p>These two methods are compared and summarized in this section. In general, both are kinds of dynamic programming algorithms and guarantee convergence. As you see, in both you must use Bellman equations.</p>
 <p>In policy iteration, you start with a random policy, then in several steps, you update utilities with a fixed policy. We called this part policy evaluation. $O(|S|^ 2)$ time required per iteration. Next, you must go to the policy improvement phase. it takes $O(|S|^ 2|A|)$ time. You find a better policy using a one-step look-ahead. If the policy doesn’t change, it means you reach the optimal answer.</p>
@@ -316,11 +320,11 @@ $O(\lvert S\rvert^{2} \lvert A\rvert)=O(\lvert S\rvert^{2})+O(\lvert S\rvert^{2}
 <p><center><img src="/notes/assets/images/MDP_vs_RL2.jpg" width="800"/></center></p>
 <p><br/></p>
 <div id="references"><h1> References </h1></div>
-<ul>
-<li>AI course teached by Dr. Rohban at Sharif University of Technology, Fall 2021</li>
-<li>Russell, S. J., Norvig, P., &amp; Davis, E. (4th. Ed). Artificial Intelligence: A modern approach. Pearson Educación. </li>
-<li><a href="https://www.geeksforgeeks.org">Geeks For Geeks</a></li>
-<li><a href="https://towardsdatascience.com">Towards Data Science</a></li>
-<li><a href="https://ai.stanford.edu/~gwthomas/notes/mdps.pdf">ai.stanford.edu</a></li>
-<li><a href="http://ai.berkeley.edu">ai.berkeley.edu</a></li>
-</ul>
+<hr/>
+<p><br/>
++ AI course teached by Dr. Rohban at Sharif University of Technology, Fall 2021
++ Russell, S. J., Norvig, P., &amp; Davis, E. (4th. Ed). Artificial Intelligence: A modern approach. Pearson Educación. 
++ <a href="https://www.geeksforgeeks.org">Geeks For Geeks</a>
++ <a href="https://towardsdatascience.com">Towards Data Science</a>
++ <a href="https://ai.stanford.edu/~gwthomas/notes/mdps.pdf">ai.stanford.edu</a>
++ <a href="http://ai.berkeley.edu">ai.berkeley.edu</a></p>
