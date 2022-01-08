@@ -212,9 +212,9 @@ $$</p>
 <blockquote>
 <p><div id="pi_cafv" style="color:#4d025c;"><h3><i>Computing Actions from Values</i></h3></div></p>
 </blockquote>
-<p>Assume we have the optimal values $U^*(s)$.</p>
+<p>Assume we have the optimal values $U^\star(s)$.</p>
 <p>We need to do a mini-expectimax.</p>
-<p>$$\pi^<em>(s)=\underset{a}{\operatorname{argmax}} \Sigma_{s'} {P(s^{\prime}|s,a)} \Big [R(s,a,s') + {\gamma}U^{</em>}(s') \Big]$$</p>
+<p>$$\pi^\star(s)=\underset{a}{\operatorname{argmax}} \Sigma_{s'} {P(s^{\prime}|s,a)} \Big [R(s,a,s') + {\gamma}U^{\star}(s') \Big]$$</p>
 <p>This is called policy extraction, since it gets the policy implied by the values</p>
 <p><br/></p>
 <blockquote>
@@ -223,7 +223,7 @@ $$</p>
 <p>Assume we have the optimal Q-values.</p>
 <p>This is kind of one-step expectimax with assumption that terminal values $U^\pi_k(s)$ are less or equal than result value from bellman equation. so we can conclude that new policy is better than the previous one.</p>
 <p>The action is completely trivial.</p>
-<p>$$\pi^<em>(s)=\underset{a}{\operatorname{argmax}} Q^</em>(s,a)$$</p>
+<p>$$\pi^\star(s)=\underset{a}{\operatorname{argmax}} Q^\star(s,a)$$</p>
 <p><strong>Comparison:</strong>
 actions are easier to select from q-values than values.</p>
 <p><strong>Efficiency:</strong>
