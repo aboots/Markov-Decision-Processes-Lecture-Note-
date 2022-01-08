@@ -284,7 +284,7 @@ It is an one-step algorithm.</p>
 <p><strong>function</strong> Policy-Iteration($MDP$) <strong>returns</strong> a utility function   <br/>
   <strong>inputs</strong>: MDP, an MDP with states $S$ , actions $A(s)$, transition model $P(s^{\prime}|s,a)$,   <br/>
         $U$ , a vector of utilities for states in $S$, initially zero    <br/>
-       $\pi$, a policy vector indexed by state, initially random   <br/>
+        $\pi$, a policy vector indexed by state, initially random   <br/>
   <strong>repeat</strong> <br/>
     $U \leftarrow $ Policy-Evaluation($\pi$, $U$, MDP)    <br/>
     $unchanged? \leftarrow$ true   <br/>
