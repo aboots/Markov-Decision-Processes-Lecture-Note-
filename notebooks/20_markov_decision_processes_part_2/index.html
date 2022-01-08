@@ -183,7 +183,9 @@ $$</p>
 If one action is clearly better than all others, then the exact magnitude of the utilities on the states involved need not be precise. 
 This insight suggests an alternative way to find optimal policies.
 Policy iteration is a different approach to find the optimal policy for given states and actions.</p>
+<p><br/></p>
 <div id="pi_id" style="color:#33013d;"><h2>The idea of policy iteration</h2></div>
+<p><br/></p>
 <p>Once a policy, $\pi_0$ (could be initialized random), has been improved using $U^{\pi_0}$ to yield a better policy, $\pi_1$, we can then compute $U^{\pi_1}$ and improve it again to yield an even better $\pi_2$. We can thus obtain a sequence of monotonically improving policies and value functions.</p>
 <p>Each policy is guaranteed to be a strict improvement over the previous one (unless it is already optimal). Because a finite MDP has only a finite number of policies, this process must converge to an optimal policy and optimal value function in a finite number of iterations.</p>
 <p><br/></p>
