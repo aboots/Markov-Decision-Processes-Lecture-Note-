@@ -53,7 +53,30 @@ metadata: notebooks_20_markov_decision_processes_part_2_metadata
 <div id="value_iteration"><h1> Value Iteration </h1></div>
 <hr/>
 <p><br/></p>
-<p><center><img src="/notes/assets/images/value_iteration.png" width="400"/></center></p>
+<p><html>
+<head>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 70%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+</head></html></p>
+<body>
+<div class="imgbox">
+<img class="center-fit" src="/notes/assets/./images/value_iteration.png"/>
+</div>
+</body>
+<p></p>
 <p>The Bellman equation is the basis of the <strong>value iteration</strong> algorithm for solving MDPs. We would like to solve these simultaneous equations to find the utilities. One thing to try is an iterative approach. We start with arbitrary initial values for the utilities, calculate the right-hand side of the equation, and plug it into the left-hand side. Thereby updating the utility of each state from the utilities of its neighbors. We repeat this until we reach an equilibrium.</p>
 <p>Let $U_{i}$ be a utility function that $U_{i}(s)$ gives the utility value for state s at the $i$th iteration. The iteration step, called a <strong>Bellman update</strong>, looks like this:   </p>
 <p>$$
@@ -176,7 +199,30 @@ $$
 N = \Big \lceil \frac{\log{(\frac{R_{max}}{\epsilon (1-\gamma)})}}{\log{(\frac{1}{\gamma})}} \Big \rceil
 $$</p>
 <p>$N$ does not depend much on the ratio $\frac{\epsilon}{R_{max}}$ because value iteration converges exponentially fast but $N$ grows rapidly as $\gamma$ becomes close to 1. We can get fast convergence if we make $\gamma$ small.</p>
-<p><center><img src="/notes/assets/./images/value_iteration_numbers.png" width="350"/></center></p>
+<p><html>
+<head>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 70%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+</head></html></p>
+<body>
+<div class="imgbox">
+<img class="center-fit" src="/notes/assets/./images/value_iteration_numbers.png"/>
+</div>
+</body>
+<p></p>
 <p>Figure shows how $N$ varies with $\gamma$, for different values of the ratio $c = \frac{2\epsilon}{R_{max}}$. </p>
 <p>Time complexity of each iteration of value iteration is $O(\lvert S\rvert^{2} \lvert A\rvert)$. Thus, time complexity of value iteration is $O \Big (\lvert S\rvert^{2} \lvert A\rvert \Big \lceil \frac{\log{(\frac{R_{max}}{\epsilon (1-\gamma)})}}{\log{(\frac{1}{\gamma})}} \Big \rceil \Big )$</p>
 <p><br/></p>
@@ -195,7 +241,30 @@ Policy iteration is a different approach to find the optimal policy for given st
 <p><br/></p>
 <div id="pe" style="color:#33013d;"><h2>Policy Evaluation</h2></div>
 <p><br/></p>
-<p><center><img src="/notes/assets/./images/policy_evaluation.png" width="300"/></center></p>
+<p><html>
+<head>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 70%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+</head></html></p>
+<body>
+<div class="imgbox">
+<img class="center-fit" src="/notes/assets/./images/policy_evaluation.png"/>
+</div>
+</body>
+<p></p>
 <p><br/></p>
 <blockquote>
 <p><div id="fp" style="color:#4d025c;"><h3><i>Fixed Policy</i></h3></div></p>
@@ -205,7 +274,30 @@ Policy iteration is a different approach to find the optimal policy for given st
 U_{k}^{\pi}(s) \leftarrow \Sigma_{s'} {P(s^{\prime}|s,\pi(s))} \Big [R(s,\pi(s),s') + {\gamma}U^{\pi}_{k}(s') \Big]
 $$</p>
 <p><br/></p>
-<p><center><img src="/notes/assets/./images/fixed_policy2.png" width="600"/></center></p>
+<p><html>
+<head>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 60%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+</head></html></p>
+<body>
+<div class="imgbox">
+<img class="center-fit" src="/notes/assets/./images/fixed_policy2.png"/>
+</div>
+</body>
+<p></p>
 <p><strong>Idea:</strong> Calculate values for the fixed policy:</p>
 <p>$U_0^\pi=0$</p>
 <p>$U_{k+1}^{\pi}(s) \leftarrow \Sigma_{s'} {P(s^{\prime}|s,\pi(s))} \Big [R(s,\pi(s),s') + {\gamma}U^{\pi}_{k}(s') \Big]$</p>
@@ -213,7 +305,30 @@ $$</p>
 <p><br/></p>
 <div id="pex" style="color:#33013d;"><h2>Policy Extraction (Improvement)</h2></div>
 <p><br/></p>
-<p><center><img src="/notes/assets/./images/policy_extraction.png" width="300"/></center></p>
+<p><html>
+<head>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 60%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+</head></html></p>
+<body>
+<div class="imgbox">
+<img class="center-fit" src="/notes/assets/./images/policy_extraction.png"/>
+</div>
+</body>
+<p></p>
 <p><br/></p>
 <blockquote>
 <p><div id="pi_cafv" style="color:#4d025c;"><h3><i>Computing Actions from Values</i></h3></div></p>
@@ -237,7 +352,30 @@ for each state we compute all the calcaulations and take max on different action
 <p><br/></p>
 <div id="pis" style="color:#33013d;"><h2>Policy Iteration Summary</h2></div>
 <p><br/></p>
-<p><center><img src="/notes/assets/./images/policy_iteration.png" width="300"/></center></p>
+<p><html>
+<head>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 40%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+</head></html></p>
+<body>
+<div class="imgbox">
+<img class="center-fit" src="/notes/assets/./images/policy_iteration.png"/>
+</div>
+</body>
+<p></p>
 <p>The policy iteration algorithm alternates the following two steps, beginning from some initial policy $\pi_0$</p>
 <ul>
 <li>
@@ -326,7 +464,7 @@ $O(\lvert S\rvert^{2} \lvert A\rvert)=O(\lvert S\rvert^{2})+O(\lvert S\rvert^{2}
         }
         .imgbox {
             display: grid;
-            height: 90%;
+            height: 100%;
         }
         .center-fit {
             max-width: 90%;
