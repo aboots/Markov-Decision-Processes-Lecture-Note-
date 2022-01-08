@@ -265,14 +265,14 @@ It is an one-step algorithm.</p>
 <p><br/></p>
 <div id="pi_code" style="color:#33013d;"><h2> Policy-Iteration pseudocode </h2></div>
 <p><br/></p>
-<p><strong>function</strong> Q-Value(MDP, $s, a, U$) <strong>returns</strong> a utility value <br/>
-  $\Sigma_{s'} {P(s^{\prime}|s,a)} \Big [R(s,a,s') + {\gamma}U^{*}(s') \Big]$</p>
+<p><strong>function</strong> Q-Value($MDP, s, a, U$) <strong>returns</strong> a utility value <br/>
+  <strong>return</strong> $\Sigma_{s'} {P(s^{\prime}|s,a)} \Big [R(s,a,s') + {\gamma}U^{*}(s') \Big]$</p>
 <p><br/></p>
 <p><strong>function</strong> Policy-Evaluation($\pi, U$, MDP) <strong>returns</strong> a utility function <br/>
   <strong>inputs</strong>: MDP, an MDP with states $S$ , actions $A(s)$, transition model $P(s^{\prime}|s,a)$,   <br/>
-          rewards $R(s,a,s^{\prime})$, discount $\gamma$   <br/>
-          $U$, $U^{\prime}$, utility functions for states in S with policy $\pi$ <br/>
-          $\delta$, the maximum relative change in the utility of any state    <br/>
+       rewards $R(s,a,s^{\prime})$, discount $\gamma$   <br/>
+       $U$, $U^{\prime}$, utility functions for states in S with policy $\pi$ <br/>
+       $\delta$, the maximum relative change in the utility of any state    <br/>
   <strong>repeat</strong> <br/>
       $U \leftarrow U^{\prime}$;$\delta \leftarrow 0$     <br/>
      <strong>for each</strong> state s <strong>in</strong> S <strong>do</strong> <br/>
@@ -281,20 +281,20 @@ It is an one-step algorithm.</p>
   <strong>until</strong> $\delta \leq \frac{1 - \gamma}{\gamma} \epsilon$    <br/>
   <strong>return</strong> $U$</p>
 <p><br/></p>
-<p><strong>function</strong> Policy-Iteration(MDP) <strong>returns</strong> a utility function   <br/>
+<p><strong>function</strong> Policy-Iteration($MDP$) <strong>returns</strong> a utility function   <br/>
   <strong>inputs</strong>: MDP, an MDP with states $S$ , actions $A(s)$, transition model $P(s^{\prime}|s,a)$,   <br/>
         $U$ , a vector of utilities for states in $S$, initially zero    <br/>
-               $\pi$, a policy vector indexed by state, initially random   <br/>
+       $\pi$, a policy vector indexed by state, initially random   <br/>
   <strong>repeat</strong> <br/>
     $U \leftarrow $ Policy-Evaluation($\pi$, $U$, MDP)    <br/>
     $unchanged? \leftarrow$ true   <br/>
     <strong>for each</strong> state s <strong>in</strong> S <strong>do</strong> <br/>
-      $a^<em> \leftarrow \underset{a \in A(s)}{\operatorname{argmax}}$ Q-Value(MDP, $s, a, U$)<br/>
-      </em><em>if</em><em>   $\max\limits_{a \in A(s)}$ Q-Value(MDP, $s, a^</em>, U$) $&gt;$ Q-Value(MDP, $s, \pi[s], U$)   <strong>then</strong>    <strong>do</strong> <br/>
-        $\pi[s] \leftarrow a^<em>$   <br/>
+      $a^\star \leftarrow \underset{a \in A(s)}{\operatorname{argmax}}$ Q-Value($MDP, s, a, U$)<br/>
+      <strong>if</strong>   $\max\limits_{a \in A(s)}$ Q-Value($MDP, s, a^\star, U$) $&gt;$ Q-Value($MDP, s, \pi[s], U$)   <strong>then</strong>    <strong>do</strong> <br/>
+        $\pi[s] \leftarrow a^\star$   <br/>
         $unchanged? \leftarrow$ false   <br/>
-  </em><em>until</em><em> $unchanged?$   <br/>
-  </em><em>return</em>* $\pi$</p>
+  <strong>until</strong> $unchanged?$   <br/>
+  <strong>return</strong> $\pi$</p>
 <p><strong>Optimality:</strong>
 Policy iteration is optimal</p>
 <p><strong>Convergence:</strong>
